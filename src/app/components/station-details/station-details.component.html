@@ -1,0 +1,18 @@
+<div class="card" *ngIf="selectedStation">
+  <div class="card-body">
+    <h5 class="card-title">{{ selectedStation.name }}</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <i class="bi bi-geo-alt"></i> {{ selectedStation.address }}
+      </li>
+      <li class="list-group-item">
+        <i class="bi bi-bicycle"></i> Capacidad: {{ selectedStation.capacity }} bicicletas
+      </li>
+      <li class="list-group-item">
+        <span [class]="'badge ' + (selectedStation.status === 'Disponible' ? 'bg-success' : 'bg-danger')">
+          {{ selectedStation.status }}
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>

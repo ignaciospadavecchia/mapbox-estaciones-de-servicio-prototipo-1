@@ -1,0 +1,12 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Filtrar Estaciones</h5>
+    <form [formGroup]="filterForm">
+      <select class="form-select" formControlName="status">
+        <option value="">Todas las estaciones</option>
+        <option value="Disponible">Disponibles</option>
+        <option value="Completa">Completas</option>
+      </select>
+    </form>
+  </div>
+</div>
